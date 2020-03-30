@@ -1,5 +1,5 @@
 import request from 'superagent'
-import { getTotals } from '../constants'
+import { baseUrl } from '../constants'
 
 export const DATA_FETCHED = 'DATA_FETCHED'
 
@@ -13,7 +13,7 @@ export const fetchData = () => async (dispatch, getState) => {
   const { data } = state
   if (!data.length) {
     const response = await request
-      .get(`${getTotals}`)
+      .get(`${baseUrl}/totals`)
       .set({
         "x-rapidapi-host": "covid-19-data.p.rapidapi.com",
         "x-rapidapi-key": "4b282c7b64mshc70565ba6bd45a0p11a355jsn26a1fb48ae46"

@@ -3,19 +3,38 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
 }
-
+h1{
+  font-size: 3em;
+}
 .container{
+  text-align: center;
   color: white;
   margin-top: 100px;
+  font-family: 'Courgette', cursive;
 }
 
 .numbers-container {
   opacity: 0.9;
+  margin-top: 100px;
 }
 .numbers{
+  text-align: center;
   background-color: black;
-  margin-top: 50px;
+  padding: 15px;
+  border: 2px solid white;
   font-size: 2em;
   font-weight: 600;
   color: white; 
+}
+
+.recovered{
+  color: green
+}
+
+.deaths{
+  color:red
+}
+
+.confirmed{
+  color: yellow;
 }
