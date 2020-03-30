@@ -1,0 +1,21 @@
+body {
+  background-image: url('../image/corona-updates.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.container{
+  color: white;
+  margin-top: 100px;
+}
+
+.numbers-container {
+  opacity: 0.9;
+}
+.numbers{
+  background-color: black;
+  margin-top: 50px;
+  font-size: 2em;
+  font-weight: 600;
+  color: white; 
+}
