@@ -11,7 +11,7 @@ const fetchCountryDataPayload = payload => ({
 export const fetchCountryData = countryName => async (dispatch, getState) => {
   const state = getState()
   const { countryData } = state
-  if (!countryData) {
+  if (!countryData.length) {
     const response = await request
       .get(`${baseUrl}/country`)
       .query({"name": `${countryName}`})

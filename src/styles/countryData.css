@@ -1,0 +1,13 @@
+.text{
+  color: white;
+  font-size: 2em;
+}
+
+h1{
+  text-align: center;
+}
+
+.selector{
+  font-size: 3em;
+  color: red;
+}
