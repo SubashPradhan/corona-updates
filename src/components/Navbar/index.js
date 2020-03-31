@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import { Navbar } from 'react-bootstrap'
 import { Nav } from 'react-bootstrap'
 import { NavDropdown } from 'react-bootstrap'
-import { Link } from 'react-router-dom'
 import '../../styles/navbar.css'
 
 
@@ -12,15 +11,13 @@ class NavBar extends Component {
     return <div>
       <Navbar bg='light' expand="lg" className='navBar'>
         <Navbar.Brand>
-          <Link to='/news'>
-            Corona-Updates
-          </Link>
+          <Nav.Link to='/news'>Corona-Updates</Nav.Link>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
             <Nav.Link href="#home">News</Nav.Link>
-            <Nav.Link href="#link">Per Country Data</Nav.Link>
+            <Nav.Link href="country">Per Country Data</Nav.Link>
             <NavDropdown title="Dropdown" id="basic-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>

@@ -4,32 +4,26 @@ import { connect } from 'react-redux'
 import View from './view'
 import {countries} from 'country-data';
 
-
 class CountryData extends Component {
   state = {country: null, select: true}
 
-  onSelectFlag = (countryCode) => {
-    const updatedCountry = countries[countryCode].name
-    this.setState({
+  onSelectFlag = async (countryCode) => {
+    const updatedCountry = await countries[countryCode].name
+    await this.setState({
       country: updatedCountry,
-    })
-  }
-
-  onSubmit = () => {
-    this.props.fetchCountryData(this.state.country)
-    this.setState({
       select: false
     })
+    this.props.fetchCountryData(this.state.country)
   }
 
   render() {
-    console.log("countryData", this.props)
-    return <View
+    return <div>
+    <View
       select={this.state.select}
       countryData={this.props.countryData}
-      onSubmit={this.onSubmit}
       onSelectFlag={this.onSelectFlag}
     />
+    </div>
   }
 }
 const mapStateToProps = state => {

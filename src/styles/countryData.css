@@ -3,11 +3,40 @@
   font-size: 2em;
 }
 
-h1{
+.heading{
   text-align: center;
+  color: yellow;
+  font-size: 3em;
+  font-weight: bold;
+}
+
+.flag-select__option{  
+  background:rgb(240, 220, 220);
+  color:black;
+  font-weight: 900;
+  font-size: 1.6em;
+  width: 350px;
+  min-width: auto;
+  border: 2px solid black;
+  padding: 0px;
+}
+
+.country-name {
+  margin-bottom: 70px;
 }
 
 .selector{
-  font-size: 3em;
-  color: red;
+  background-color: #d142f5;
 }
+.selector ::placeholder{
+  font-size: 1.5em;
+}
+
+.selector :focus {
+  outline: none;
+}
+
+.selector :hover{
+  opacity: 0.9;
+}
+

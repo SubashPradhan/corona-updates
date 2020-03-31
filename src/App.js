@@ -7,7 +7,7 @@ class App extends Component{
   render(){
     return <div>
       <Route path='/' exact component={Home} />
-      <Route path='/country' component={CountryData} />
+      <Route path='/country' exact component={CountryData} />
     </div>
   }
 }

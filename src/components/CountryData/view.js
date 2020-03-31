@@ -6,13 +6,13 @@ import '../../styles/home.css'
 import AnimatedNumber from 'animated-number-react'
 
 export default function view(props) {
-  const { onSubmit, onSelectFlag, countryData, select } = props
+  const { onSelectFlag, countryData, select } = props
   const formatValue = value => `${Number(value).toFixed(0)}`;
-  
-  const country = countryData.map(co => <div>
-    <h1>Country: {co.country}</h1>
-    <div className='row'>
 
+  const country = countryData.map((co, i) => <div key={i}>
+    <h1 className='country-name'>{co.country}</h1>
+
+    <div className='row'>
       <div className='numbers col-lg-4 col-12 confirmed' >
         Total Confirmed:
           <p className='total'>
@@ -47,21 +47,19 @@ export default function view(props) {
   </div>)
 
   if (select) {
-    return <div className='container selector'>
+    return <div className='container'>
       <ReactFlagsSelect
+        className='selector'
         searchable={true}
         searchPlaceholder="Search for a country"
         onSelect={onSelectFlag}
       />
-      <button onClick={onSubmit}>Submit</button>
     </div>
   } else {
     return <div className='container'>
-      {/* <h1>Country:{country}</h1> */}
-      <div>
+      <div className='numbers-container'>
         {country}
       </div>
-
     </div>
   }
 }
