@@ -13,6 +13,7 @@ body {
 .numbers-container {
   opacity: 0.9;
   margin-top: 100px;
+  /* text-align: center; */
 }
 .numbers{
   text-align: center;
@@ -34,4 +35,15 @@ body {
 
 .confirmed{
   color: yellow;
+}
+
+@media screen and (max-width: 600px) {
+  .heading{
+    font-size: 0.6em;
+  }
+
+  .container{
+    max-width: auto;
+    font-size: 1em;
+  }
 }

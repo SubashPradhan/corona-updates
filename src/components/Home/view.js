@@ -6,8 +6,10 @@ import '../../styles/countryData.css'
 
 export default function view() {
   return <div>
-    <NavBar/> 
-    <h1 className='heading container'>COVID- 19 (CORONA) UPDATES</h1>
+    <NavBar />
+    <h1 className='heading container'>
+      COVID-19 (Corona) Updates.
+    </h1>
     <Selector />
   </div>
 
