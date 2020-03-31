@@ -11,6 +11,7 @@
 }
 
 .flag-select__option{  
+  width: 350px !important;
   background:rgb(240, 220, 220);
   color:black;
   font-weight: 900;

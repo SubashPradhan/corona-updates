@@ -11,13 +11,12 @@ class NavBar extends Component {
     return <div>
       <Navbar bg='light' expand="lg" className='navBar'>
         <Navbar.Brand>
-          <Nav.Link to='/news'>Corona-Updates</Nav.Link>
+          <Nav.Link href='/'>Corona-Updates</Nav.Link>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
-            <Nav.Link href="#home">News</Nav.Link>
-            <Nav.Link href="country">Per Country Data</Nav.Link>
+            <Nav.Link href="/news">News</Nav.Link>
             <NavDropdown title="Dropdown" id="basic-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
