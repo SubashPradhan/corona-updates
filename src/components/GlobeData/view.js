@@ -3,11 +3,11 @@ import '../../styles/home.css'
 import AnimatedNumber from "animated-number-react";
 
 export default function view(props) {
-  const { data   } = props
+  const { data} = props
   const formatValue = value => `${Number(value).toFixed(0)}`;
 
-  const totals = data.map(numbers =>
-    <div key={data.length}>
+  const totals = data.map((numbers, i) =>
+    <div key={i}>
       <div className='row'>
         <div className='numbers col-lg-4 col-12 confirmed' >
           Global Confirmed:
@@ -43,7 +43,6 @@ export default function view(props) {
   )
   return <div>
     <div className='container'>
-      {/* <h1>COVID- 19 (CORONA) UPDATES</h1> */}
       <div className='numbers-container'>
         {totals}
       </div>
