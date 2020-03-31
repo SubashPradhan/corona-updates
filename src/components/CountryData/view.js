@@ -43,7 +43,7 @@ export default function view(props) {
   </div>)
 
   if (select) {
-    return <div className='container'>
+    return <div className='data-container container'>
       <div className='numbers-container'>
         {country}
       </div>

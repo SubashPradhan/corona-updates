@@ -42,7 +42,7 @@ export default function view(props) {
     </div>
   )
   return <div>
-    <div className='container'>
+    <div className='data-container container'>
       <div className='numbers-container'>
         {totals}
       </div>

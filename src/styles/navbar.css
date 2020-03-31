@@ -1,3 +1,14 @@
-.navBar{
-  color: white;
+.nav-container{
+  font-family: 'Courgette', cursive;
+  opacity: 0.8; 
+  background-color: black;
+  border-bottom: 3px solid white;
 }
+
+.nav-link{
+  font-size: 1.3em;
+  color: white;
+  font-weight: bolder;
+}
+
+
