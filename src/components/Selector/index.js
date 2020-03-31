@@ -8,7 +8,7 @@ import CountryData from '../CountryData/view'
 class Selector extends Component {
   state = { country: null, select: false }
 
-  onSelectFlag = async (countryCode, e) => {
+  onSelectFlag = async (countryCode) => {
     const updatedCountry = await countries[countryCode].name
     await this.setState({
       country: updatedCountry,
@@ -21,8 +21,7 @@ class Selector extends Component {
     return <div>
       <View
         select={this.state.select}
-        onSelectFlag={this.onSelectFlag}
-        onChange={this.onchange} />
+        onSelectFlag={this.onSelectFlag} />
       <CountryData
         countryData={this.props.countryData}
         select={this.state.select} />

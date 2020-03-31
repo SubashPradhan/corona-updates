@@ -9,8 +9,6 @@ export default function view(props) {
   const formatValue = value => `${Number(value).toFixed(0)}`;
 
   const country = countryData.map((co, i) => <div key={i}>
-    <h1 className='country-name'>{co.country}</h1>
-
     <div className='row'>
       <div className='numbers col-lg-4 col-12 confirmed' >
         Total Confirmed:
