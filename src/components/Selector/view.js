@@ -15,8 +15,6 @@ export default function view(props) {
       selectedSize={20}
       optionsSize={13}
     />
-    {/* <MapView onSelectFlag={this.onSelectFlag} /> */}
-
   </div>
 
 }
