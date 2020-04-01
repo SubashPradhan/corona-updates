@@ -8,8 +8,8 @@ class App extends Component{
   render(){
     return <div>
       <Route path='/' exact component={Home} />
-      <Route path='/news' exact component={News} />
-      <Route path='/mapview' exact component={MapView} />
+      <Route path='/news' component={News} />
+      <Route path='/mapview' component={MapView} />
     </div>
   }
 }

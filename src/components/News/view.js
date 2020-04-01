@@ -1,15 +1,15 @@
 import React from 'react'
 import '../../styles/news.css'
 import Navbar from '../Navbar'
-import { Card, Row, Col, Button } from 'react-bootstrap'
+import { Card, Button } from 'react-bootstrap'
 
 export default function view(props) {
   const { news } = props
   console.log("Props", props)
   console.log("PROPSNEWS", news)
-  const article = news.map((singleArticle, i) => <Row div key={i}>
+  const article = news.map((singleArticle, i) => <div key={i} className='row'>
 
-    <Col xs='12' lg='12'>
+    <div className='col-12'>
       <Card className='single-article'>
         <Card.Header>{singleArticle.title}</Card.Header>
         <Card.Img className='news-image card-body' src={singleArticle.urlToImage} alt={singleArticle.title} />
@@ -30,8 +30,8 @@ export default function view(props) {
           <small className="text-muted">PublishedAt: {singleArticle.publishedAt.slice(0, 10)}</small>
         </Card.Footer>
       </Card>
-    </Col>
-  </Row>
+    </div>
+  </div>
   )
   return <div >
     <Navbar />

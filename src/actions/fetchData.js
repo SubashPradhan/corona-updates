@@ -19,7 +19,6 @@ export const fetchData = () => async (dispatch, getState) => {
         "x-rapidapi-key": "4b282c7b64mshc70565ba6bd45a0p11a355jsn26a1fb48ae46"
       })
     const action = await fetchDataPayload(response.body)
-    console.log(response.body)
     return dispatch(action)
   }
 }

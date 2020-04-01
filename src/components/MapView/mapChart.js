@@ -6,6 +6,7 @@ import {
   Geography
 } from "react-simple-maps";
 
+
 const geoUrl =
   "https://raw.githubusercontent.com/zcreativelabs/react-simple-maps/master/topojson-maps/world-110m.json";
 
@@ -19,7 +20,8 @@ const rounded = num => {
   }
 };
 
-const MapChart = ({ setTooltipContent }) => {
+const MapChart = ({ setTooltipContent }, props) => {
+  console.log("MAPView", props)
   return (
     <>
       <ComposableMap data-tip="" projectionConfig={{ scale: 200 }}>
@@ -32,7 +34,10 @@ const MapChart = ({ setTooltipContent }) => {
                   geography={geo}
                   onMouseEnter={() => {
                     const { NAME} = geo.properties;
-                    setTooltipContent(`${NAME}`);
+                    const {onSelectFlag, country} = props
+                    onSelectFlag(`${NAME}`)
+                    // const{country} = props
+                    setTooltipContent(`${country}`);
                   }}
                   onMouseLeave={() => {
                     setTooltipContent("");

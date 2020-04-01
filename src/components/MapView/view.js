@@ -4,15 +4,20 @@ import ReactTooltip from "react-tooltip";
 import "../../styles/mapChart.css";
 
 import MapChart from "./mapChart";
+import CountryData from '../CountryData'
+
 
 export default function (props) {
   const {country} = props
-  const [content, setContent] = useState('');
-  console.log('PORPS', props)
+  const name = country
+  console.log("Name", name)
+  const [count, setContent] = useState();
   return (
     <div>
-      <MapChart setTooltipContent={setContent} />
-      <ReactTooltip>{content}</ReactTooltip>
+      <MapChart 
+        setTooltipContent={setContent} 
+        />
+      <ReactTooltip>{country}</ReactTooltip>
     </div>
   );
 }

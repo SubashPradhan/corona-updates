@@ -2,8 +2,8 @@ import React from 'react'
 import '../../styles/countryData.css'
 import '../../styles/home.css'
 import AnimatedNumber from 'animated-number-react'
-import GlobeData from '../GlobeData'  
-import MapView from '../MapView/view'
+import GlobeData from '../GlobeData'
+
 
 export default function view(props) {
   const { countryData, select } = props
@@ -48,10 +48,11 @@ export default function view(props) {
       <div className='numbers-container'>
         {country}
       </div>
-      <MapView country={country} />
     </div>
   } else {
-    return <GlobeData />
+    return <div>
+      <GlobeData />
+    </div>
   }
 }
 
