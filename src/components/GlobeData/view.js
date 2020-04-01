@@ -2,6 +2,7 @@ import React from 'react'
 import '../../styles/home.css'
 import AnimatedNumber from "animated-number-react";
 
+
 export default function view(props) {
   const { data} = props
   const formatValue = value => `${Number(value).toFixed(0)}`;

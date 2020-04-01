@@ -11,7 +11,7 @@ export default function view(props) {
       className='selector'
       searchable={true}
       searchPlaceholder="Search for a country"
-      onSelect={countryCode => onSelectFlag(countryCode)}
+      onSelect={onSelectFlag}
       selectedSize={20}
       optionsSize={13}
     />
