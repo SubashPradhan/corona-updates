@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import {Route} from 'react-router-dom'
 import Home from './components/Home'
 import News from './components/News'
-import MapView from './components/MapView/view'
+import MapView from './components/MapView'
 
 class App extends Component{
   render(){

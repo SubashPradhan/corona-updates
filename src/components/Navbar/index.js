@@ -13,6 +13,7 @@ class NavBar extends Component {
           <Nav.Link href='/'>Corona-Updates</Nav.Link>
         </Navbar.Brand>
         <Nav.Link href="/news">News</Nav.Link>
+        <Nav.Link href="/mapview">On Map</Nav.Link>
       </Navbar>
     </div >
   }
