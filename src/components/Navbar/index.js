@@ -9,8 +9,8 @@ class NavBar extends Component {
   render() {
     return <div className='nav-container'>
       <Navbar expand="lg" className='navBar'>
-        <Navbar.Brand class='nav-brand'>
-          <Nav.Link class='nav-container' href='/'>Corona-Updates</Nav.Link>
+        <Navbar.Brand className='nav-brand'>
+          <Nav.Link href='/'>Corona-Updates</Nav.Link>
         </Navbar.Brand>
         <Nav.Link href="/news">News</Nav.Link>
       </Navbar>

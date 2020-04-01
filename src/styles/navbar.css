@@ -9,6 +9,11 @@
   font-size: 1.3em;
   color: white;
   font-weight: bolder;
+  text-decoration: none;
+}
+
+.nav-brand{
+  text-decoration: none;
 }
 
 

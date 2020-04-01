@@ -17,6 +17,11 @@ body {
   padding: 8px;
 }
 
+.link-news{
+  color: black; 
+  font-size: 1.3em;
+}
+
 /* .news-image{
   min-height: 150px;
   min-width: 150px;

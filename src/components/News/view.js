@@ -7,7 +7,7 @@ export default function view(props) {
   const { news } = props
   console.log("Props", props)
   console.log("PROPSNEWS", news)
-  const article = news.map((singleArticle, i) => <Row key={i}>
+  const article = news.map((singleArticle, i) => <Row div key={i}>
 
     <Col xs='12' lg='12'>
       <Card className='single-article'>
@@ -20,7 +20,11 @@ export default function view(props) {
           <Card.Text>
             Description: {singleArticle.description}
           </Card.Text>
-          <Button variant="primary">Go to the website</Button>
+          <Button variant='outline-info'>
+            <a href={singleArticle.url} className='link-news' target='_blank' rel='noreferrer noopener'>
+              Read Further on official website
+              </a>
+          </Button>
         </Card.Body>
         <Card.Footer>
           <small className="text-muted">PublishedAt: {singleArticle.publishedAt.slice(0, 10)}</small>
