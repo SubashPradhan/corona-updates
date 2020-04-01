@@ -6,6 +6,7 @@ import { countries } from 'country-data';
 import { geoUrl } from '../../constants'
 import '../../styles/mapChart.css'
 import View from './view'
+import NavBar from '../Navbar'
 
 class MapView extends Component {
   state = { country: '', confirmed: '', recovered: '', deaths: '' }
@@ -24,6 +25,7 @@ class MapView extends Component {
 
   render() {
     return <div>
+      <NavBar />
       <ComposableMap data-tip="" projectionConfig={{ scale: 200 }}>
         <Geographies className='geo-style' geography={geoUrl}>
           {({ geographies }) => geographies.map(geo => (
