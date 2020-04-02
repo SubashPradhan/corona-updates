@@ -1,6 +1,5 @@
 import React from 'react'
 import ReactTooltip from "react-tooltip";
-// import AnimatedNumber from 'animated-number-react'
 import "../../styles/mapChart.css";
 
 export default function (props) {
@@ -13,5 +12,5 @@ export default function (props) {
       <div className='numbers-toolTip deaths'>deaths: {deaths}</div>
     </ReactTooltip>
   </div>
+} 
 
-}

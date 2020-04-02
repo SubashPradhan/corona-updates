@@ -40,9 +40,9 @@ class MapView extends Component {
               onMouseLeave={() => {
                 this.setState({
                   country: '',
-                  confirmed: '',
-                  recovered: '',
-                  deaths: ''
+                  confirmed: 0,
+                  recovered: 0,
+                  deaths: 0
                 })
               }}
 
