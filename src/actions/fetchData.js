@@ -13,12 +13,9 @@ export const fetchData = () => async (dispatch, getState) => {
   const { data } = state
   if (!data.length) {
     const response = await request
-      .get(`${baseUrl}/totals`)
-      .set({
-        "x-rapidapi-host": "covid-19-data.p.rapidapi.com",
-        "x-rapidapi-key": "4b282c7b64mshc70565ba6bd45a0p11a355jsn26a1fb48ae46"
-      })
+      .get(`${baseUrl}`)
     const action = await fetchDataPayload(response.body)
+    console.log(response.body.cases)
     return dispatch(action)
   }
 }

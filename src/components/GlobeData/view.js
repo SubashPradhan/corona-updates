@@ -4,17 +4,19 @@ import AnimatedNumber from "animated-number-react";
 
 
 export default function view(props) {
-  const { data} = props
+  const { data } = props
   const formatValue = value => `${Number(value).toFixed(0)}`;
 
-  const totals = data.map((numbers, i) =>
-    <div key={i}>
+  // const totals = data.map((numbers, i) =>
+  // <div key={i}>
+  return <div className='data-container container'>
+    <div className='numbers-container'>
       <div className='row'>
         <div className='numbers col-lg-4 col-12 confirmed' >
           Global Confirmed:
           <p className='total'>
             <AnimatedNumber
-              value={numbers.confirmed}
+              value={data.cases}
               formatValue={formatValue}
             />
           </p>
@@ -24,7 +26,7 @@ export default function view(props) {
           Global Recovered:
           <p className='total'>
             <AnimatedNumber
-              value={numbers.recovered}
+              value={data.recovered}
               formatValue={formatValue}
             />
           </p>
@@ -34,19 +36,22 @@ export default function view(props) {
           Global Deaths:
           <p className='total'>
             <AnimatedNumber
-              value={numbers.deaths}
+              value={data.deaths}
               formatValue={formatValue}
             />
           </p>
         </div>
       </div>
     </div>
-  )
-  return <div>
-    <div className='data-container container'>
-      <div className='numbers-container'>
-        {totals}
-      </div>
-    </div>
   </div>
-}
+      }
+    {/* // </div>
+  // )
+//   return <div>
+//     <div className='data-container container'>
+//       <div className='numbers-container'>
+//         {totals}
+//       </div>
+//     </div>
+//   </div>
+// } */}
