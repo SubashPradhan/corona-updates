@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import { ComposableMap, Geographies, Geography } from "react-simple-maps";
 import { fetchCountryData } from '../../actions/fetchCountryData'
 import { connect } from 'react-redux'
-import { countries } from 'country-data';
 import { geoUrl } from '../../constants'
 import '../../styles/mapChart.css'
 import View from './view'
@@ -13,7 +12,6 @@ class MapView extends Component {
 
   toolTipContent = async (countryData) => {
     return countryData.map((singleCountry) => {
-      // console.log(singleCountry.country)
       return this.setState({
         country: singleCountry.country,
         confirmed: singleCountry.confirmed,
