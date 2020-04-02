@@ -15,7 +15,6 @@ export const fetchData = () => async (dispatch, getState) => {
     const response = await request
       .get(`${baseUrl}`)
     const action = await fetchDataPayload(response.body)
-    console.log(response.body.cases)
     return dispatch(action)
   }
 }

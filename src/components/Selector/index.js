@@ -2,16 +2,14 @@ import React, { Component } from 'react'
 import { fetchCountryData } from '../../actions/fetchCountryData'
 import { connect } from 'react-redux'
 import View from './view'
-import { countries } from 'country-data';
 import CountryData from '../CountryData/view'
 
 class Selector extends Component {
   state = { country: null, select: false }
 
   onSelectFlag = async (countryCode) => {
-    const updatedCountry = await countries[countryCode].name
     await this.setState({
-      country: updatedCountry,
+      country: countryCode,
       select: true
     })
     this.props.fetchCountryData(this.state.country)

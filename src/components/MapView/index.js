@@ -6,21 +6,20 @@ import { geoUrl } from '../../constants'
 import '../../styles/mapChart.css'
 import View from './view'
 import NavBar from '../Navbar'
+import countryList from 'iso-3166-country-list'
 
 class MapView extends Component {
-  state = { country: '', confirmed: '', recovered: '', deaths: '' }
+  state = { country: '', confirmed: '', recovered: '', deaths: '', toolTip: false }
 
-  toolTipContent = async (countryData) => {
-    return countryData.map((singleCountry) => {
-      return this.setState({
-        country: singleCountry.country,
-        confirmed: singleCountry.confirmed,
-        recovered: singleCountry.recovered,
-        deaths: singleCountry.deaths
-      })
+  toolTipContent = async (singleCountry, NAME) => {
+    return this.setState({
+      country: NAME,
+      confirmed: singleCountry.confirmed,
+      recovered: singleCountry.recovered,
+      deaths: singleCountry.deaths,
+      toolTip: true
     })
   }
-
 
   render() {
     return <div>
@@ -33,16 +32,18 @@ class MapView extends Component {
               geography={geo}
               onMouseEnter={async () => {
                 const { NAME } = geo.properties;
-                await this.props.fetchCountryData(NAME)
-                await this.toolTipContent(this.props.countryData)
+                const countryCode = await countryList.code(NAME)
+                await this.props.fetchCountryData(countryCode)
+                await this.toolTipContent(this.props.countryData, NAME)
               }
-            }
+              }
               onMouseLeave={() => {
                 this.setState({
                   country: '',
                   confirmed: 0,
                   recovered: 0,
-                  deaths: 0
+                  deaths: 0, 
+                  toolTip: false 
                 })
               }}
 
@@ -56,6 +57,7 @@ class MapView extends Component {
         confirmed={this.state.confirmed}
         recovered={this.state.recovered}
         deaths={this.state.deaths}
+        toolTip={this.state.toolTip}
       />
     </div>
   }
