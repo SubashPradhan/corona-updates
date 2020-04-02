@@ -7,18 +7,28 @@
 
 .nav-link{
   font-size: 1.3em;
-  color: white;
+  color: white;  
   font-weight: bolder;
   text-decoration: none;
 }
 
 .link-collapse{
   color: white !important;
+  
+}
+
+.link-collapse :hover{
+  color: green !important;
 }
 
 .navbar-toggler{
-  background-color:white !important;
+  background-color:#ff6666 !important;
+  text-decoration: none;
+  outline: none !important;
 }
+
+
+
 
 
 

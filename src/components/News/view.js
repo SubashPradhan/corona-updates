@@ -9,7 +9,7 @@ export default function view(props) {
 
     <div className='col-12'>
       <Card className='single-article'>
-        <Card.Header>{singleArticle.title}</Card.Header>
+        <Card.Header class='header-text'>{singleArticle.title}</Card.Header>
         <Card.Img className='news-image card-body' src={singleArticle.urlToImage} alt={singleArticle.title} />
         <Card.Body>
           <Card.Text className='blockquote-footer' >
@@ -25,13 +25,13 @@ export default function view(props) {
           </Button>
         </Card.Body>
         <Card.Footer>
-          <small className="text-muted">PublishedAt: {singleArticle.publishedAt.slice(0, 10)}</small>
+          <small className="text-muted">PublishedOn: {singleArticle.publishedAt.slice(0, 10)}</small>
         </Card.Footer>
       </Card>
     </div>
   </div>
   )
-  return <div >
+  return <div>
     <Navbar />
     <div className='news container'>
       {article}

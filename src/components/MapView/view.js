@@ -4,13 +4,15 @@ import "../../styles/mapChart.css";
 
 export default function (props) {
   const { country, confirmed, recovered, deaths } = props
-  return <div>
-    <ReactTooltip className='numbers-container'>
-      <h4>{country}</h4>
-      <div className='numbers-toolTip confirmed'>confirmed: {confirmed}</div>
-      <div className='numbers-toolTip recovered'>recovered: {recovered} </div>
-      <div className='numbers-toolTip deaths'>deaths: {deaths}</div>
+  return  <ReactTooltip
+    className='tool-tip-content'  
+    place='bottom'
+    arrowColor=' #2d862d'
+    >
+      <h4 className='numbers-toolTip-header'>{country}</h4>
+      <div className='numbers-toolTip confirmed'>Confirmed: {confirmed}</div>
+      <div className='numbers-toolTip recovered'>Recovered: {recovered} </div>
+      <div className='numbers-toolTip deaths'>Deaths: {deaths}</div>
     </ReactTooltip>
-  </div>
 } 
 
