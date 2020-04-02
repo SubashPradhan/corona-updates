@@ -22,3 +22,12 @@ svg {
     fill: #E42;
     outline: none;
   }
+
+.numbers-toolTip{
+  text-align: center;
+  background-color: black;
+  padding: 4px;
+  border: 1px solid white;
+  font-size: 1.5em;
+  font-weight: bold;
+}

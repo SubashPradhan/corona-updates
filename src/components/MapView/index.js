@@ -11,10 +11,11 @@ import NavBar from '../Navbar'
 class MapView extends Component {
   state = { country: '', confirmed: '', recovered: '', deaths: '' }
 
-  toolTipContent = async (countryData, country) => {
+  toolTipContent = async (countryData) => {
     return countryData.map((singleCountry) => {
+      // console.log(singleCountry.country)
       return this.setState({
-        country: country,
+        country: singleCountry.country,
         confirmed: singleCountry.confirmed,
         recovered: singleCountry.recovered,
         deaths: singleCountry.deaths
@@ -35,7 +36,7 @@ class MapView extends Component {
               onMouseEnter={async () => {
                 const { NAME } = geo.properties;
                 await this.props.fetchCountryData(NAME)
-                await this.toolTipContent(this.props.countryData, NAME)
+                await this.toolTipContent(this.props.countryData)
               }
             }
               onMouseLeave={() => {
@@ -53,6 +54,7 @@ class MapView extends Component {
         </Geographies>
       </ComposableMap>
       <View
+        country={this.state.country}
         confirmed={this.state.confirmed}
         recovered={this.state.recovered}
         deaths={this.state.deaths}
