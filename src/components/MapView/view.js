@@ -5,7 +5,7 @@ import "../../styles/mapChart.css";
 export default function (props) {
   const { country, confirmed, recovered, deaths, toolTip } = props
   
-  if(toolTip){
+  // if(toolTip && country.length){
     return  <ReactTooltip
     className='tool-tip-content'  
     place='bottom'
@@ -16,8 +16,8 @@ export default function (props) {
       <div className='numbers-toolTip recovered'>Recovered: {recovered} </div>
       <div className='numbers-toolTip deaths'>Deaths: {deaths}</div>
     </ReactTooltip>
-  }else{
-    return <div>Select one</div>
-  }
+  // }else{
+  //   return <div>Select one</div>
+  // }
 } 
 
