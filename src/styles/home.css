@@ -3,7 +3,6 @@ html, body{
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  position: relative;
 }
 
 .data-container{
@@ -16,7 +15,7 @@ html, body{
 .numbers-container {
   opacity: 0.9;  
   margin-top: 70px;
-  min-height: 100vh;
+  min-height: calc(100vh - 50vh);
 }
 
 .numbers{
@@ -50,7 +49,4 @@ html, body{
     font-size: 1.5em;
   }
 
-  .numbers-container{
-    min-height: 0;
-  }
 }

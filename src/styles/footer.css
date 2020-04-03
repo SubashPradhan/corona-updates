@@ -2,9 +2,6 @@
   font-family: 'Courgette', cursive;
   background-color: black;
   opacity: 0.8;
-  position: absolute;
-  left: 0;
-  bottom: 0;
   width: 100%;
   text-align: center;
 }
@@ -13,6 +10,6 @@
   font-weight: bolder;
   text-align: center;
   padding: 5px;
-  margin: 10px; 
-  font-size: 1.5em;
+  margin: 5px; 
+  font-size: 1.7em;
 }

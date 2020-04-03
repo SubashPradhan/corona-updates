@@ -5,7 +5,6 @@ import '../../styles/home.css'
 
 export default function view(props) {
   const { newUpdates } = props
-  console.log(newUpdates.deaths)
   return <Carousel
    className='footer'
    indicators={false}
