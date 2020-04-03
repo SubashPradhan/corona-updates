@@ -15,7 +15,7 @@ html, body{
 .numbers-container {
   opacity: 0.9;  
   margin-top: 70px;
-  min-height: calc(100vh - 50vh);
+  min-height: calc(100vh - 53vh);
 }
 
 .numbers{
