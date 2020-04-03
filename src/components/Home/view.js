@@ -12,7 +12,7 @@ export default function view() {
       COVID-19 (Corona) Updates.
     </h1>
     <Selector />
-    <Footer/>
+    <Footer />
   </div>
 
 }

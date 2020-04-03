@@ -1,22 +1,24 @@
-body{
+html, body{
   background-image: url('../image/corona-updates.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  max-height: auto;
+  position: relative;
 }
 
 .data-container{
   text-align: center;
   color: white;
-  margin-top: 70px;
+  margin-top: 50px;
   font-family: 'Courgette', cursive;
 }
 
 .numbers-container {
-  opacity: 0.9;
-  margin-top: 100px;  
+  opacity: 0.9;  
+  margin-top: 70px;
+  min-height: 45vh;
 }
+
 .numbers{
   text-align: center;
   background-color: black;
@@ -44,12 +46,7 @@ body{
 }
 
 @media screen and (max-width: 600px) {
-  .heading{
-    font-size: 0.6em;
-  }
-
-  .container{
-    max-width: auto;
-    font-size: 1em;
+  .numbers{
+    font-size: 1.5em;
   }
 }

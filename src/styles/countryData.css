@@ -2,7 +2,7 @@
   text-align: center;
   color: white;
   font-size: 2.5em;
-  font-weight: bolder;
+  font-weight: bold;
   opacity: 0.8;
 }
 
@@ -14,10 +14,6 @@
   min-width: 350px !important;
   border: 2px solid black;
   padding: 0px;
-}
-
-.country-name {
-  margin-bottom: 70px;
 }
 
 .selector{
@@ -36,4 +32,8 @@
   outline: none;
 }
 
-
+@media screen and (max-width: 600px) {
+  .heading{
+    font-size: 1.8em;
+  }
+}
