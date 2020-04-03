@@ -24,7 +24,7 @@ class MapView extends Component {
   render() {
     return <div>
       <NavBar />
-      <ComposableMap data-tip="" projectionConfig={{ scale: 200 }}>
+      <ComposableMap className='map' data-tip="" projectionConfig={{ scale: 200 }}>
         <Geographies className='geo-style' geography={geoUrl}>
           {({ geographies }) => geographies.map(geo => (
             <Geography

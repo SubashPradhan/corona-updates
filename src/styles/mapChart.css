@@ -38,4 +38,8 @@ svg {
   .numbers-toolTip-header{
     font-size: 1em;
   }
+
+  .map{
+    margin-top: 70px;
+  }
 }
