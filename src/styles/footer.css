@@ -9,7 +9,14 @@
 .footer-text{
   font-weight: bolder;
   text-align: center;
-  padding: 5px;
-  margin: 5px; 
-  font-size: 1.7em;
+  padding: 8px;
+  margin: 7px; 
+  font-size: 1.5em;
+}
+
+@media screen and (max-width:600px){
+  .footer{
+    margin-top: 10px;
+  }
+
 }
