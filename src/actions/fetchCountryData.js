@@ -1,4 +1,4 @@
-import { countryDataUrl } from '../constants'
+import { dataUrl } from '../constants'
 import request from 'superagent'
 
 export const COUNTRY_DATA_FETCHED = 'COUNTRY_DATA_FETCHED'
@@ -14,7 +14,7 @@ export const fetchCountryData = countryCode => async (dispatch, getState) => {
   try {
     if (!countryData.length){
       const response = await request
-      .get(`${countryDataUrl}/${countryCode}`)
+      .get(`${dataUrl}/countries/${countryCode}`)
       const action = await fetchCountryDataPayload(response.body.data.latest_data)
       return dispatch(action)
     }

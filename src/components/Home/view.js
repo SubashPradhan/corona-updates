@@ -2,6 +2,7 @@ import React from 'react'
 import '../../styles/home.css'
 import NavBar from '../Navbar'
 import Selector from '../Selector'
+import Footer from '../Footer'
 import '../../styles/countryData.css'
 
 export default function view() {
@@ -11,6 +12,7 @@ export default function view() {
       COVID-19 (Corona) Updates.
     </h1>
     <Selector />
+    <Footer/>
   </div>
 
 }
