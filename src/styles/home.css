@@ -2,7 +2,10 @@ body{
   background-image: url('../image/corona-updates.jpg');
   background-size: cover;
   background-repeat: no-repeat;
+  background-attachment: fixed;
+  max-height: auto;
 }
+
 .data-container{
   text-align: center;
   color: white;
