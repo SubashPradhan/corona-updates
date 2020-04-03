@@ -11,15 +11,15 @@ export default function view(props) {
    controls={false}
    >
     <Carousel.Item>
-      <div className='footer-text confirmed'>New Confirmed Cases: {newUpdates.confirmed}</div>
+      <div className='footer-text confirmed'>New Confirmed Cases: {newUpdates.new_confirmed}</div>
     </Carousel.Item>
 
     <Carousel.Item>
-      <div className='footer-text recovered'>New Recovered Updates: {newUpdates.recovered}</div>
+      <div className='footer-text recovered'>New Recovered Updates: {newUpdates.new_recovered}</div>
     </Carousel.Item>
 
     <Carousel.Item>
-      <div className='footer-text deaths'>New Confirmed Deaths: {newUpdates.deaths}</div>
+      <div className='footer-text deaths'>New Confirmed Deaths: {newUpdates.new_deaths}</div>
     </Carousel.Item>
   </Carousel>
 }
