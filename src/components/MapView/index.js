@@ -37,15 +37,15 @@ class MapView extends Component {
                 await this.toolTipContent(this.props.countryData, NAME)
               }
               }
-              // onMouseLeave={() => {
-              //   this.setState({
-              //     country: '',
-              //     confirmed: 0,
-              //     recovered: 0,
-              //     deaths: 0, 
-              //     toolTip: false 
-              //   })
-              // }} 
+              onMouseLeave={() => {
+                this.setState({
+                  country: '',
+                  confirmed: 0,
+                  recovered: 0,
+                  deaths: 0, 
+                  toolTip: false 
+                })
+              }} 
 
             />
           ))
