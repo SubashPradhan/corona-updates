@@ -9,6 +9,7 @@ export default function view(props) {
    className='footer'
    indicators={false}
    controls={false}
+   interval={2500}
    >
     <Carousel.Item>
       <div className='footer-text confirmed'>New Confirmed Cases: {newUpdates.new_confirmed}</div>
