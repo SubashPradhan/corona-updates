@@ -6,8 +6,21 @@ import CountryData from '../CountryData/view'
 
 class Selector extends Component {
   state = { country: null, select: false, isMobile: false }
-
+  componentDidMount = async() =>{
+    // onResize = () => {
+      await window.innerWidth < 600 ?
+        this.setState({
+          isMobile: true
+        }) :
+        this.setState({
+          isMobile: false
+        })
+      console.log(this.state.isMobile)
+    }
+  // }
+  
   onSelectFlag = async (countryCode) => {
+    
     await this.setState({
       country: countryCode,
       select: true
@@ -15,23 +28,13 @@ class Selector extends Component {
     this.props.fetchCountryData(this.state.country)
   }
   
-  onResize = () => {
-    window.innerWidth < 600 ? 
-    this.setState({
-      isMobile: true
-    }) : 
-    this.setState({
-      isMobile: false
-    })
-    console.log(this.state.isMobile)
-  }
   render() {
     return <div>
       <View
         select={this.state.select}
-        onSelectFlag={this.onSelectFlag} 
-        isMobile={this.isMobile}
-        />
+        onSelectFlag={this.onSelectFlag}
+        isMobile={this.state.isMobile}
+      />
       <CountryData
         countryData={this.props.countryData}
         select={this.state.select} />

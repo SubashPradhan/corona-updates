@@ -12,8 +12,8 @@ export default function view(props) {
       searchable={true}
       searchPlaceholder="Search for a country"
       onSelect={onSelectFlag}
-      selectedSize={20}
-      optionsSize={13}
+      selectedSize={isMobile ? 15 : 20}
+      optionsSize={isMobile? 12.5 : 13}
     />
   </div>
 

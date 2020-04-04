@@ -11,9 +11,13 @@
   color: red;
   font-weight: 900;
   font-size: 1.6em;
-  min-width: 350px !important;
+  min-width: 350px;
   border: 2px solid black;
   padding: 0px;
+}
+
+.flag-select__options{
+  min-height: 350px;
 }
 
 .selector{
@@ -35,13 +39,5 @@
 @media screen and (max-width: 600px) {
   .heading{
     font-size: 1.8em;
-  }
-
-  .selector ::placeholder{
-    font-size: 1.2em;
-  }
-
-  .flag-select__options{
-    max-width: inherit;
   }
 }
