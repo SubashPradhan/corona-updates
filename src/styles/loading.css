@@ -6,7 +6,7 @@
 
 /* loading dots */
 .loading:after {
-  content: ' ..';
+  content: ' .';
   animation: dots 2.1s steps(9, end) infinite;
 }
 
