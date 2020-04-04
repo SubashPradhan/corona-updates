@@ -5,7 +5,7 @@ import View from './view'
 import CountryData from '../CountryData/view'
 
 class Selector extends Component {
-  state = { country: null, select: false }
+  state = { country: null, select: false, isMobile: false }
 
   onSelectFlag = async (countryCode) => {
     await this.setState({
@@ -14,12 +14,24 @@ class Selector extends Component {
     })
     this.props.fetchCountryData(this.state.country)
   }
-
+  
+  onResize = () => {
+    window.innerWidth < 600 ? 
+    this.setState({
+      isMobile: true
+    }) : 
+    this.setState({
+      isMobile: false
+    })
+    console.log(this.state.isMobile)
+  }
   render() {
     return <div>
       <View
         select={this.state.select}
-        onSelectFlag={this.onSelectFlag} />
+        onSelectFlag={this.onSelectFlag} 
+        isMobile={this.isMobile}
+        />
       <CountryData
         countryData={this.props.countryData}
         select={this.state.select} />

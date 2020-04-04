@@ -40,4 +40,8 @@
   .selector ::placeholder{
     font-size: 1.2em;
   }
+
+  .flag-select__options{
+    max-width: inherit;
+  }
 }

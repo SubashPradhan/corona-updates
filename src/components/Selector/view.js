@@ -4,7 +4,8 @@ import '../../styles/countryData.css'
 import 'react-flags-select/css/react-flags-select.css';
 
 export default function view(props) {
-  const { onSelectFlag } = props
+  const { onSelectFlag, isMobile } = props
+  console.log("VERSIONMOBILE", isMobile)
   return <div className='data-container'>
     <ReactFlagsSelect
       className='selector'
