@@ -16,6 +16,10 @@
   padding: 0px;
 }
 
+.flag-select__options{
+  min-height: 350px;
+}
+
 .selector{
   text-align: center;
   background-color: black ;

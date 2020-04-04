@@ -13,7 +13,7 @@ export default function view(props) {
       searchPlaceholder="Search for a country"
       onSelect={onSelectFlag}
       selectedSize={isMobile ? 15 : 20}
-      optionsSize={isMobile? 10 : 13}
+      optionsSize={isMobile? 11.5 : 13}
     />
   </div>
 
