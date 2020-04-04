@@ -1,12 +1,13 @@
 import React from 'react'
 import '../../styles/home.css'
+import '../../styles/loading.css'
 import AnimatedNumber from "animated-number-react";
 
 export default function view(props) {
   const { data } = props
   const formatValue = (value) => {
     if(value === 0){
-      return '...'
+      return <p className='loading'></p>
     }
     return `${Number(value).toFixed(0)}`;
   }
