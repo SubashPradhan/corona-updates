@@ -6,28 +6,25 @@ import CountryData from '../CountryData/view'
 
 class Selector extends Component {
   state = { country: null, select: false, isMobile: false }
-  componentDidMount = async() =>{
-    // onResize = () => {
-      await window.innerWidth < 600 ?
-        this.setState({
-          isMobile: true
-        }) :
-        this.setState({
-          isMobile: false
-        })
-      console.log(this.state.isMobile)
-    }
-  // }
-  
+  componentDidMount = async () => {
+    window.innerWidth < 600 ?
+      this.setState({
+        isMobile: true
+      }) :
+      this.setState({
+        isMobile: false
+      })
+  }
+
   onSelectFlag = async (countryCode) => {
-    
+
     await this.setState({
       country: countryCode,
       select: true
     })
     this.props.fetchCountryData(this.state.country)
   }
-  
+
   render() {
     return <div>
       <View
