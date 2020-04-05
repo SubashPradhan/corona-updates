@@ -31,14 +31,14 @@ class MapView extends Component {
               key={geo.rsmKey}
               geography={geo}
               onMouseEnter={async () => {
-                const { NAME } = geo.properties;
+                const { NAME } = await geo.properties;
                 const countryCode = await countryList.code(NAME)
                 await this.props.fetchCountryData(countryCode)
                 await this.toolTipContent(this.props.countryData, NAME)
               }
               }
-              onMouseLeave={() => {
-                this.setState({
+              onMouseLeave={async () => {
+                await this.setState({
                   country: '',
                   confirmed: 0,
                   recovered: 0,
