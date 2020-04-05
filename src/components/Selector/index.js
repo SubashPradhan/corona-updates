@@ -6,7 +6,8 @@ import CountryData from '../CountryData/view'
 
 class Selector extends Component {
   state = { country: null, select: false, isMobile: false }
-  componentDidMount = async () => {
+  
+  componentDidMount = () => {
     window.innerWidth < 600 ?
       this.setState({
         isMobile: true
@@ -17,7 +18,6 @@ class Selector extends Component {
   }
 
   onSelectFlag = async (countryCode) => {
-
     await this.setState({
       country: countryCode,
       select: true

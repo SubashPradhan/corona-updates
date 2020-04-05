@@ -8,13 +8,8 @@ const fetchDataPayload = payload => ({
   payload
 })
 
-export const fetchData = () => async (dispatch, getState) => {
-  const state = getState()
-  const { data } = state
-  if (!data.length) {
-    const response = await request
-      .get(`${baseUrl}`)
-    const action = await fetchDataPayload(response.body)
-    return dispatch(action)
-  }
+export const fetchData = () => async (dispatch) => {
+  const response = await request(`${baseUrl}`)
+  const action = await fetchDataPayload(response.body)
+  return dispatch(action)
 }

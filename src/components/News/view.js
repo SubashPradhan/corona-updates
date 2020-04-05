@@ -9,7 +9,7 @@ export default function view(props) {
 
     <div className='col-12'>
       <Card className='single-article'>
-        <Card.Header class='header-text'>{singleArticle.title}</Card.Header>
+        <Card.Header className='header-text'>{singleArticle.title}</Card.Header>
         <Card.Img className='news-image card-body' src={singleArticle.urlToImage} alt={singleArticle.title} />
         <Card.Body>
           <Card.Text className='blockquote-footer' >

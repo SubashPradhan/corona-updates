@@ -6,12 +6,12 @@ import AnimatedNumber from "animated-number-react";
 export default function view(props) {
   const { data } = props
   const formatValue = (value) => {
-    if(value === 0){
-      return <p className='loading'></p>
+    if(!value){
+      return <span className='loading'></span>
     }
     return `${Number(value).toFixed(0)}`;
   }
-
+  
   return <div className='data-container container'>
     <div className='numbers-container'>
       <div className='row'>
@@ -29,9 +29,9 @@ export default function view(props) {
           Global Recovered:
           <p className='total'>
             <AnimatedNumber
-              value={data.recovered}
               formatValue={formatValue}
-            />
+              value={data.recovered}
+              />
           </p>
         </div>
 
