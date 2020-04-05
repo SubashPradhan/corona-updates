@@ -6,8 +6,8 @@ import View from './view'
 class GlobeData extends Component {
   state= {isLoading: true}
 
-  componentDidMount() {
-    this.props.fetchData()
+  componentDidMount = async() => {
+    await this.props.fetchData()
     this.setState({
       isLoading: false
     })
