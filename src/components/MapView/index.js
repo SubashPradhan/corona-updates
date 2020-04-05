@@ -12,7 +12,7 @@ class MapView extends Component {
   state = { country: '', confirmed: '', recovered: '', deaths: '', toolTip: false }
 
   toolTipContent = async (singleCountry, NAME) => {
-    return this.setState({
+    await this.setState({
       country: NAME,
       confirmed: singleCountry.confirmed,
       recovered: singleCountry.recovered,
