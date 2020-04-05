@@ -46,5 +46,9 @@
     font-size: 1em;
   }
 
+  input, select, textarea{
+    font-size: 1em !important;
+  }
+
 }
 
