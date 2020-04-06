@@ -1,5 +1,11 @@
-html, body{
+.no-webp html, body{
   background-image: url('../images/corona-updates.jpg');
+}
+
+.webp html, body{
+  background-image: url('../images/corona-updates.webp');
+}
+html, body{
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
