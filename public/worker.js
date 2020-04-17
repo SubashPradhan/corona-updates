@@ -38,10 +38,14 @@ this.addEventListener('activate', event => {
   event.waitUntil(
     caches.keys().then(cacheNames => {
       return Promise.all(
-        cacheNames.map(cacheName => {
+        // cacheNames.map(cacheName => {
           // if (cacheWhitelist.indexOf(cacheName) === -1) {
-            return caches.delete(cacheName);
+            // return caches.delete(cacheName);
           // }
+          caches.keys().then(function(names) {
+            for (let name of names)
+                caches.delete(name);
+        
         })
       );
     })
