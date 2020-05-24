@@ -14,6 +14,8 @@ export const fetchNews = () => async (dispatch, getState) => {
   try {
     if (!news.length) {
       const response = await request(newsUrl)
+      console.log("Response", response)
+      console.log("Body", response.body)
       const action = await fetchNewsPayload(response.body)
       return dispatch(action)
     }
