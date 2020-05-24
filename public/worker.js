@@ -6,7 +6,8 @@ var urlsToCache = [
 ];
 
 // Install a service worker
-this.addEventListener('install', event => {
+self.addEventListener('install', event => {
+  self.skipWaiting()
   // Perform install steps
   event.waitUntil(
     caches.open(CACHE_NAME)
@@ -18,7 +19,7 @@ this.addEventListener('install', event => {
 });
 
 // Cache and return requests
-this.addEventListener('fetch', event => {
+self.addEventListener('fetch', event => {
   event.respondWith(
     caches.match(event.request)
       .then(function (response) {
@@ -33,7 +34,7 @@ this.addEventListener('fetch', event => {
 });
 
 // Update a service worker
-this.addEventListener('activate', event => {
+self.addEventListener('activate', event => {
   var cacheWhitelist = ['pwa-task-manager'];
   event.waitUntil(
     caches.keys().then(cacheNames => {
