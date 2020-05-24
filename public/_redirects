@@ -1,2 +1,1 @@
 /*    /index.html   200
-/v2/top-headlines/*  http://newsapi.org/v2/top-headlines?q=corona&apiKey=770da092ee4447b5b91b5f2eb7829583&language=en&sortBy=publishedAt&pageSize=10/:splat  200

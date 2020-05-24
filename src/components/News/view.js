@@ -5,7 +5,8 @@ import { Card, Button } from 'react-bootstrap'
 
 export default function view(props) {
   const { news } = props
-  const article = news.map((singleArticle, i) => <div key={i} className='row'>
+  const articlesOfNews = news.articles
+  const article = articlesOfNews && articlesOfNews.map((singleArticle, i) => <div key={i} className='row'>
 
     <div className='col-12'>
       <Card className='single-article'>
