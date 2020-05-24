@@ -9,14 +9,14 @@ const fetchNewsPayload = payload => ({
 })
 
 export const fetchNews = () => async (dispatch, getState) => {
-  const state = getState()
-  const { news } = state
+  // const state = getState()
+  // const { news } = state
   try {
-    if (!news.length) {
+    // if (!news.length) {
       const response = await request(newsUrl)
       const action = await fetchNewsPayload(response.body)
       return dispatch(action)
-    }
+    // }
   } catch (error) {
     console.log(error)
   }
