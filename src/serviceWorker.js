@@ -77,16 +77,16 @@ function registerValidSW(swUrl, config) {
                     for (let registration of registrations) {
                       registration.update()
                     }
+                    window.location.reload(true)
                   })
                 }
-                window.location.reload()
               }
-              forceSWupdate()
               console.log(
                 'New content is available and will be used when all ' +
                 'tabs for this page are closed. See https://bit.ly/CRA-PWA.'
               );
               
+              forceSWupdate()
               // Execute callback
               if (config && config.onUpdate) {
                 config.onUpdate(registration);
