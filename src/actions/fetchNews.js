@@ -1,4 +1,5 @@
 import request from 'superagent'
+import {newsUrl} from '../constants'
 
 export const FETCH_NEWS = 'FETCH_NEWS'
 
@@ -12,7 +13,7 @@ export const fetchNews = () => async (dispatch, getState) => {
   const { news } = state
   try {
     if (!news.length) {
-      const response = await request('/newsApi')
+      const response = await request(newsUrl)
       console.log(response.body.articles)
       const action = await fetchNewsPayload(response.body.articles)
       return dispatch(action)
