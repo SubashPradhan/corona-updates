@@ -77,7 +77,6 @@ function registerValidSW(swUrl, config) {
                     for (let registration of registrations) {
                       registration.update()
                     }
-                    window.location.reload(true)
                   })
                 }
               }
