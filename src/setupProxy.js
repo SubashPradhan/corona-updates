@@ -4,7 +4,7 @@ module.exports = app => {
   app.use(
     createProxyMiddleware("/v2/top-headlines", {
       target: "http://newsapi.org",
-      secure: false,
+      // secure: false,
       changeOrigin: true
     })
   )
