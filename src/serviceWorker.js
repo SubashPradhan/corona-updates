@@ -67,11 +67,9 @@ function registerValidSW(swUrl, config) {
         installingWorker.onstatechange = () => {
           if (installingWorker.state === 'installed') {
             if (navigator.serviceWorker.controller) {
-              // registration.update()
               // At this point, the updated precached content has been fetched,
               // but the previous service worker will still serve the older
               // content until all client tabs are closed.
-              const forceSWupdate = () => {
                 if ('serviceWorker' in navigator) {
                   navigator.serviceWorker.getRegistrations().then(function (registrations) {
                     for (let registration of registrations) {
@@ -79,13 +77,11 @@ function registerValidSW(swUrl, config) {
                     }
                   })
                 }
-              }
               console.log(
                 'New content is available and will be used when all ' +
                 'tabs for this page are closed. See https://bit.ly/CRA-PWA.'
               );
               
-              forceSWupdate()
               // Execute callback
               if (config && config.onUpdate) {
                 config.onUpdate(registration);
