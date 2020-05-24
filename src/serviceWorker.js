@@ -49,7 +49,6 @@ export function register(config) {
       } else {
         // Is not localhost. Just register service worker
         registerValidSW(swUrl, config);
-        // return skipWaiting()
       }
     });
   }
