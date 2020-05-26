@@ -27,3 +27,10 @@
 [context."features/branch"]
   command = "gulp"
 
+[[redirects]]
+  from = "/v2/top-headlines/*"
+  to = "https://newsapi.org/:splat/:splat"
+  status = 200
+  force = true
+
+
