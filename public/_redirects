@@ -1,1 +1,2 @@
-/v2/*  https://newsapi.org/:splat    200
+/*    /index.html   200
+/v2/top-headlines/*  https://newsapi.org/:splat    200
