@@ -4,8 +4,6 @@
   opacity: 0.8;
   width: 100%;
   text-align: center;
-  bottom: 0;
-  position: fixed;
 }
 
 .footer-text{
@@ -19,7 +17,6 @@
 @media screen and (max-width:600px){
   .footer{
     margin-top: 15px;
-    position: relative;
   }
 
 }
