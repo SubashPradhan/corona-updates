@@ -9,7 +9,6 @@
     "animated-number-react": "0.0.2",
     "bootstrap": "^4.4.1",
     "country-data": "0.0.31",
-    "http-proxy-middleware": "^1.0.4",
     "iso-3166-country-list": "^0.1.2",
     "react": "^16.13.1",
     "react-bootstrap": "^1.0.0",

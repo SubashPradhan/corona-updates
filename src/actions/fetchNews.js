@@ -9,17 +9,11 @@ const fetchNewsPayload = payload => ({
 })
 
 export const fetchNews = () => async (dispatch, getState) => {
-  const state = getState()
-  const { news } = state
-  try {
-    if (!news.length) {
-      const response = await request(`${newsUrl}/newsApi`)
-      console.log("Response", response)
-      console.log("Body", response.body)
-      const action = await fetchNewsPayload(response.body)
-      return dispatch(action)
-    }
-  } catch (error) {
-    console.log(error)
+  const state= getState()
+  const {news} = state
+  if (!news.length) {
+    const response = await request(newsUrl)
+    const action = await fetchNewsPayload(response.body.articles)
+    return dispatch(action)
   }
 } 

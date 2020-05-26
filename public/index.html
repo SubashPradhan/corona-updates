@@ -10,7 +10,6 @@
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
     <link rel='preconnect' href='https://corona.lmao.ninja/v2/all'>
     <link rel='preconnect' href='https://corona-api.com'>
-    <link rel='preconnect' href="https://newsapi.org/v2/top-headlines?q=corona&apiKey=770da092ee4447b5b91b5f2eb7829583&language=en&sortBy=publishedAt&from=${new Date()}&pageSize=10"> 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cabin:400,500i|Courgette&display=swap">
     <title>Corona Updates</title>
   </head>
@@ -18,7 +17,7 @@
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
-    <!-- <script defer>
+    <script defer>
       if ('serviceWorker' in navigator) {
         window.addEventListener('load', function () {
           navigator.serviceWorker.register('worker.js').then(function (registration) {
@@ -33,7 +32,7 @@
       } else {
         console.log('Service Worker is not supported by browser.');
       }
-    </script> -->
+    </script>
 
     <!--
       This HTML file is a template.
