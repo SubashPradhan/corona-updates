@@ -1,6 +1,3 @@
 /*
-  X-Frame-Options: DENY
-  X-XSS-Protection: 1; mode=block
   Access-Control-Allow-Origin: *
-  Authorization = “Bearer x-api-key”
 
