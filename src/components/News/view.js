@@ -1,5 +1,6 @@
 import React from 'react'
 import '../../styles/news.css'
+import '../../styles/loading.css'
 import Navbar from '../Navbar'
 import { Card, Button } from 'react-bootstrap'
 
@@ -33,8 +34,14 @@ export default function view(props) {
   )
   return <div>
     <Navbar />
-    <div className='news container'>
-      {article}
-    </div>
+    {!article.length ?
+      <div className='loading news-loading'>
+        Please wait
+        </div> :
+        
+      <div className='news container'>
+        {article}
+      </div>
+    }
   </div>
 }
