@@ -1,15 +1,15 @@
 import React, { Component } from 'react'
-import {fetchNewUpdates} from '../../actions/fetchNewUpdates'
+import { fetchNewUpdates } from '../../actions/fetchNewUpdates'
 import { connect } from 'react-redux'
 import View from './view'
 
-class Footer extends Component{
+class Footer extends Component {
   componentDidMount() {
     this.props.fetchNewUpdates()
   }
 
-  render () {
-    return <View newUpdates = {this.props.newUpdates} />
+  render() {
+    return <View newUpdates={this.props.newUpdates} />
   }
 }
 
@@ -19,4 +19,4 @@ const mapStateToProps = state => {
   }
 }
 
-export default connect(mapStateToProps, {fetchNewUpdates})(Footer)
+export default connect(mapStateToProps, { fetchNewUpdates })(Footer)

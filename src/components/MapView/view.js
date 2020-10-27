@@ -4,17 +4,17 @@ import "../../styles/mapChart.css";
 
 export default function (props) {
   const { country, confirmed, recovered, deaths, toolTip } = props
-  
+
   const formatValue = (value) => {
     let number = Number(value).toFixed(0);
     return number.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   }
 
-   let confirmedCases = formatValue(confirmed);
-   let recoveredCases = formatValue(recovered);
-   let deathCases = formatValue(deaths);
+  let confirmedCases = formatValue(confirmed);
+  let recoveredCases = formatValue(recovered);
+  let deathCases = formatValue(deaths);
 
-  return toolTip?
+  return toolTip ?
     <ReactTooltip
       className='tool-tip-content'
       place='bottom'
