@@ -6,7 +6,11 @@ import GlobeData from '../GlobeData'
 
 export default function view(props) {
   const { countryData, select } = props
-  const formatValue = value => `${Number(value).toFixed(0)}`;
+  
+  const formatValue = (value) => {
+    let number = Number(value).toFixed(0);
+    return number.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  }
 
   if (select) {
     return <div className='data-container container'>

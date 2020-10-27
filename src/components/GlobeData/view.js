@@ -10,7 +10,8 @@ export default function view(props) {
     if (!value) {
       return <span className='loading'></span>
     }
-    return `${Number(value).toFixed(0)}`;
+    let number = Number(value).toFixed(0);
+    return number.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   }
   if (!isLoading) {
     return <div className='data-container container'>
