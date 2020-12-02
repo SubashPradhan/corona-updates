@@ -10,9 +10,9 @@ export default function view(props) {
   }
 
   const { newUpdates } = props
-  let newConfirmedCases = formatValue(newUpdates.new_confirmed);
-  let newRecoveredCases = formatValue(newUpdates.new_recovered);
-  let newDeathCases = formatValue(newUpdates.new_deaths);
+  let newConfirmedCases = formatValue(newUpdates.todayCases);
+  let newRecoveredCases = formatValue(newUpdates.todayRecovered);
+  let newDeathCases = formatValue(newUpdates.todayDeaths);
 
   return <Carousel
     className='footer'
